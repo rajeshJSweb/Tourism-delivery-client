@@ -8,7 +8,7 @@ const Hotel = (props) => {
     return (
         <div>
             <Card className="bg-dark text-white card-container">
-            <Card.Img className="image" src={img} alt="Card image" />
+            <Card.Img className="card-image" src={img} alt="Card image" />
             <Card.ImgOverlay>
                     <Card.Title className="title">{ hotelName}</Card.Title>
                     <Card.Text >{ description}</Card.Text>

@@ -11,7 +11,7 @@ const AddHotel = () => {
     const { register, handleSubmit, formState: { errors } } = useForm();
 
     const onSubmit = data => {
-        axios.post('http://localhost:5000/booking', data)
+        axios.post('https://dark-vault-77373.herokuapp.com/booking', data)
       .then(res => {
         if (res.data.insertedId) {
         alert('Added service successfully')
@@ -21,12 +21,12 @@ const AddHotel = () => {
     return (
         <div className="dash-container container mt-5">
             <div className="side-bar">
-            <Link to='/add-hotel'><Button className="mt-5 btn btn-primary button">Add Hotel</Button></Link>
+            <Link to='/add-hotel'><Button className="side-button">Add Hotel</Button></Link>
                 <br />
-                <Link to='/order'><Button className="mt-1 btn btn-primary button">Order</Button></Link>
+                <Link to='/order'><Button className="side-button">Order</Button></Link>
             </div>
-            <div className="main-container">
-            <h3 className='text-white ms-5 bg-dark px-2'>Add More Hotels</h3>
+    <div className="add-container">
+            <h3>Add More Hotels</h3>
             <form onSubmit={handleSubmit(onSubmit)}>
             {/* register your input into the hook by invoking the "register" function */}
     <input className="input-item" type="text" placeholder="Title" {...register("hotelName")} /> <br />

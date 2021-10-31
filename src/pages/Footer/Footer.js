@@ -5,7 +5,7 @@ import './Footer.css'
 const Footer = () => {
     return (
         <div>
-<div className="footer-container bg-dark mt-5 d-flex">
+<div className="footer-container bg-dark d-flex">
                 <div className="left text-white py-5">
                     <h1><span className="medi">trip</span>Bookng</h1>
                     <p className='description'></p>

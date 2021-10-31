@@ -9,7 +9,7 @@ const AddCart =() => {
     const [hotelDetails, setHotelDetails] = useState([]);
     const [singleHotel, setSetSingleHotel] = useState({});
     useEffect(() => {
-        fetch('http://localhost:5000/hotels')
+        fetch('https://dark-vault-77373.herokuapp.com/hotels')
             .then(res => res.json())
             .then(data => setHotelDetails(data))
     }, []);
@@ -21,8 +21,8 @@ const AddCart =() => {
     },[hotelDetails]);
 
     return (
-        <div className="container">
-            <h1>Review Your Booking{id}</h1>
+        <div className="container mb-5">
+            <h1 className="mb-5">Review Your Booking{id}</h1>
             <div className="div-container">
                 <div className="image-container">
                     <img src={ singleHotel?.img} alt="" />

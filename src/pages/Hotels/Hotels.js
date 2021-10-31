@@ -8,7 +8,7 @@ const Hotels = () => {
     const [hotels, setHotels] = useState([]);
     const [cart, setCart] = useState([]);
     useEffect(() => {
-        fetch('http://localhost:5000/hotels')
+        fetch('https://dark-vault-77373.herokuapp.com/hotels')
             .then(res => res.json())
             .then(data => setHotels(data))
     }, []);
@@ -33,7 +33,6 @@ const Hotels = () => {
                     ></Hotel>)
                 }
             </Row>
-            <h1>{ cart.length}</h1>
         </div>
     );
 };

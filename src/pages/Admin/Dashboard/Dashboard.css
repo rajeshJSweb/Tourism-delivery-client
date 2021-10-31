@@ -1,5 +1,6 @@
 .dash-container{
     display: flex;
+    margin-bottom: 20px;
 }
 .side-bar{
     background-color:rgb(136, 28, 121);
@@ -12,4 +13,25 @@ width: 70%;
 }
 .button{
     width: 100px;
+}
+
+@media only screen and (max-width:688px) {
+    .dash-container{
+        display: flex;
+        flex-direction: column;
+    }
+    .side-bar{
+        display: flex;
+        align-items: center;
+        width: 100%;
+        height: 50px;
+        background-color: chartreuse;
+    }
+    .side-button{
+        border: 0px;
+        background-color: cornflowerblue;
+        margin-left: 15px;
+        border-radius: 5px;
+        color: white;
+    }
 }

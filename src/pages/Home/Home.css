@@ -1,4 +1,6 @@
 .banner-container{
+    margin-bottom: 20px;
+    text-align: center;
     height: 450px;
     background-image: url(../../image/banner.jpg);
 }

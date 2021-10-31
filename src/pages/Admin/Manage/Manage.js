@@ -7,14 +7,14 @@ const Manage = () => {
     const [hotels, setHotels] = useState([]);
 
     useEffect(() => {
-        fetch('http://localhost:5000/hotels')
+        fetch('https://dark-vault-77373.herokuapp.com/hotels')
             .then(res => res.json())
             .then(data => setHotels(data))
     }, [])
 
 
     const handleDelete = id => {
-        fetch(`http://localhost:5000/deleteHotels/${id}`, {
+        fetch(`https://dark-vault-77373.herokuapp.com/deleteHotels/${id}`, {
             method: 'DELETE',
             headers:{"Content-type":"application/json"},
         })
@@ -30,13 +30,13 @@ const Manage = () => {
         <div>
             <div className='dash-container container mt-5'>
                 <div className="side-bar">
-                    <Link to='/add-hotel'><Button className="mt-5 btn btn-primary button">Add Hotel</Button></Link>
+                    <Link to='/add-hotel'><Button className="side-button">Add Hotel</Button></Link>
                     <br />
-                    <Link to='/manage'><Button className="mt-1 btn btn-primary button">Manage</Button></Link>
+                    <Link to='/manage'><Button className="side-button">Manage</Button></Link>
                     <br />
-                    <Link to='/order'><Button className="mt-1 btn btn-primary button">Order</Button></Link>
+                    <Link to='/order'><Button className="side-button">Order</Button></Link>
                 </div>
-                <div className='container'>
+                <div className='container manage-container'>
                     {
                         hotels.map(hotel => <div className="div-container mb-3">
                         <div className="image-container">

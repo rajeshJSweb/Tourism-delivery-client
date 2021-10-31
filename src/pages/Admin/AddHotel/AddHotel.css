@@ -1,5 +1,17 @@
+.add-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-left: 25%;
+}
 .input-item{
-    width: 70%;
-    margin-top: 30px;
-    padding: 4px;
+    margin: 10px;
+    width: 350px;
+}
+
+@media only screen and (max-width:688px){
+    .add-container{
+        margin-left: 0px;
+    }
 }

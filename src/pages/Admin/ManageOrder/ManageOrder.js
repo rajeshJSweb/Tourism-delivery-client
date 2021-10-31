@@ -1,10 +1,9 @@
 import Button from '@restart/ui/esm/Button';
-import userEvent from '@testing-library/user-event';
 import axios from 'axios';
-import React, { useEffect, useState } from 'react';
 import { useForm } from 'react-hook-form';
 import { Link } from 'react-router-dom';
 import useAuth from '../../../hooks/useAuth/useAuth';
+import './ManageOrder.css'
 
 const ManageOrder = () => {
     const { user } = useAuth();
@@ -13,7 +12,7 @@ const ManageOrder = () => {
 
 
     const onSubmit = data => {
-        axios.post('http://localhost:5000/orders', data)
+        axios.post('https://dark-vault-77373.herokuapp.com/orders', data)
       .then(res => {
         if (res.data.insertedId) {
         alert('Order Completed')
@@ -25,11 +24,11 @@ const ManageOrder = () => {
         <div>
             <div className='dash-container container mt-5'>
             <div className="side-bar">
-            <Link to='/add-hotel'><Button className="mt-5 btn btn-primary button">Add Hotel</Button></Link>
+            <Link to='/add-hotel'><Button className="side-button">Add Hotel</Button></Link>
                 <br />
-            <Link to='/manage'><Button className="mt-1 btn btn-primary button">Manage</Button></Link>
+            <Link to='/manage'><Button className="side-button">Manage</Button></Link>
                 <br />
-                <Link to='/order'><Button className="mt-1 btn btn-primary button">Order</Button></Link>
+                <Link to='/order'><Button className="side-button">Order</Button></Link>
             </div>
             <div className="main-container">
                     <h3>Complete your order</h3>

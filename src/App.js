@@ -16,6 +16,7 @@ import AddHotel from './pages/Admin/AddHotel/AddHotel';
 import ManageOrder from './pages/Admin/ManageOrder/ManageOrder';
 import Manage from './pages/Admin/Manage/Manage';
 import Footer from './pages/Footer/Footer';
+import About from './pages/About/About';
 
 function App() {
   return (
@@ -53,6 +54,9 @@ function App() {
             </Route>
             <Route path='/manage'>
               <Manage></Manage>
+            </Route>
+            <Route path="/about">
+              <About></About>
             </Route>
           <Route exact path='*'>
             <error></error>

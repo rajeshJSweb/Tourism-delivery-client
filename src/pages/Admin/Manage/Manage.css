@@ -1,6 +1,59 @@
-.manage-item{
-    text-align: left;
-    margin-left: 10px;
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
+.image-container{
+    width: 30%;
+}
+.image-container img{
+    width: 100%;
+}
+.content-container{
+    width: 70%;
+}
+.side-bar{
+    background-color: rgb(87, 86, 86);
+}
+.side-button{
+    padding: 10px 0px;
+    border: 0px;
+    width: 120px;
+    margin: 7px;
+    border-radius: 5px;
+}
+.side-button:hover{
+    background-color: rgb(10, 93, 202);
+    color: white;
+}
+
+@media only screen and (max-width:688px) {
+    .dash-container{
+        display: flex;
+        flex-direction: column;
+    }
+    .side-bar{
+        display: flex;
+        align-items: center;
+        width: 100%;
+        height: 50px;
+        background-color: rgb(3, 94, 146);
+    }
+    .side-button{
+        border: 0px;
+        background-color: cornflowerblue;
+        margin-left: 15px;
+        border-radius: 5px;
+        color: white;
+    }
+    .div-container{
+        margin-top: 15px;
+        display: flex;
+        flex-direction: column;
+    }
+    .image-container{
+        width: 100%;
+    }
+    .image-container img{
+        width: 100%;
+    }
+    .content-container{
+        display: flex;
+        flex-direction: column;
+    }
 }
