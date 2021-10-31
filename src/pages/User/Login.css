@@ -1,0 +1,12 @@
+.form-container{
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-bottom: 1px solid lightsteelblue;
+    margin-bottom: 5px;
+    padding-bottom: 10px;
+}
+.input-filed{
+    width: 320px;
+}

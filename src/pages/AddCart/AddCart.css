@@ -1,0 +1,34 @@
+.div-container{
+    display: flex;
+    border: 2px solid lightsteelblue;
+}
+.image-container{
+    display: flex;
+    justify-content: start;
+    width: 20%;
+    height: 200px;
+
+}
+.image-container img{
+    width: 200px;
+    height: 200px;
+}
+.content-container{
+    width: 80%;
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 10px;
+}
+.left-side{
+    width: 80%;
+    text-align: left;
+}
+
+@media only screen and (max-width:689px) {
+    .div-container{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+}

@@ -1,0 +1,15 @@
+.dash-container{
+    display: flex;
+}
+.side-bar{
+    background-color:rgb(136, 28, 121);
+    padding: 5px;
+    width: 25%;
+    height: 500px;
+}
+.main-container{
+width: 70%;
+}
+.button{
+    width: 100px;
+}
